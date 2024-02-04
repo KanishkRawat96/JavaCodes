@@ -1,0 +1,21 @@
+
+
+class Solution{
+    
+  
+    int maxTripletSum(int a[], int n)
+    {
+        // Complete the function
+        Arrays.sort(a);
+        if(n==3)
+        {
+            return  (a[0]+a[1]+a[2]);
+        }
+        else
+        {
+        return (a[n-1]+a[n-2]+a[n-3]);
+        }
+    }
+  
+    
+}
