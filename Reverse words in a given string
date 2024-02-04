@@ -1,0 +1,20 @@
+class Solution {
+    // Function to reverse words in a given string.
+    String reverseWords(String S) {
+        // code here
+        String S2 = "";
+        int p = 0;
+
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) == '.'){
+                S2 = S.substring(p, i) + S2;
+                p = i + 1;
+             S2 = "." + S2; 
+            }
+        }
+        // Add the last word in case the string does not end with a space or period.
+        S2 = S.substring(p) + S2;
+
+        return S2;
+    }
+}
